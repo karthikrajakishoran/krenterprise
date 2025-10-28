@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karthik Enterprise — Flipkart & Amazon Business Solutions</title>
+  <meta name="description" content="Karthik Enterprise — Official Flipkart & Amazon seller providing professional business services, logistics, and e-commerce solutions.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      transition: background 2s ease-in-out;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 18px 60px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      background: #fff;
+      padding: 12px 50px;
+      box-shadow: 0 3px 18px rgba(0,0,0,0.15);
+    }
+
+    .brand img {
+      height: 140px;
+      width: auto;
+      border-radius: 18px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .brand img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 17px;
+      transition: color 0.3s ease, transform 0.2s;
+    }
+
+    nav a:hover {
+      color: #b10047;
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 25px;
+      background: rgba(255,255,255,0.3);
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      color: #b10047;
+      font-weight: 800;
+      animation: slideDown 1s ease-out;
+    }
+
+    .hero p {
+      margin-top: 18px;
+      font-size: 19px;
+      color: #555;
+      max-width: 760px;
+      margin-inline: auto;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .btn {
+      margin-top: 30px;
+      background: #b10047;
+      color: #fff;
+      border: none;
+      padding: 14px 38px;
+      font-size: 18px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #d9005b;
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    section {
+      padding: 80px 70px;
+      text-align: center;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    h2 {
+      color: #b10047;
+      font-size: 30px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .underline {
+      width: 80px;
+      height: 4px;
+      background: #b10047;
+      margin: 0 auto 40px;
+      border-radius: 2px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      width: 320px;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+    }
+
+    .feature h3 {
+      color: #b10047;
+      margin-bottom: 12px;
+    }
+
+    .about-text {
+      max-width: 850px;
+      margin: 0 auto;
+      color: #444;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #b10047;
+      box-shadow: 0 0 5px rgba(177,0,71,0.3);
+      outline: none;
+    }
+
+    .message-status {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    footer {
+      background: #b10047;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        padding: 15px 25px;
+      }
+
+      .brand img {
+        height: 110px;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .feature {
+        width: 100%;
+        max-width: 380px;
+      }
+
+      section {
+        padding: 60px 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        font-size: 15px;
+      }
+
+      .btn {
+        font-size: 16px;
+        padding: 12px 28px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <div class="brand">
+      <img src="krep.jpg" alt="KR Enterprise Logo">
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Empowering E-Commerce Businesses to Grow</h1>
+    <p>“Karthik Enterprise — Official Flipkart & Amazon seller, offering complete business and logistics solutions.”</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="underline"></div>
+    <div class="features">
+      <div class="feature">
+        <h3>Flipkart Seller Support</h3>
+        <p>We help manage your Flipkart seller account, product listing, and inventory for maximum visibility.</p>
+      </div>
+      <div class="feature">
+        <h3>Amazon Seller Management</h3>
+        <p>Boost your Amazon sales with optimized listings, ad campaigns, and data-driven insights.</p>
+      </div>
+      <div class="feature">
+        <h3>Order & Logistics Handling</h3>
+        <p>End-to-end order tracking, packaging, and courier management for seamless delivery operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div the="underline"></div>
+    <p class="about-text">
+      Founded by <b>Karthik Raja R.</b>, <b>KR Enterprise</b> is a professional Flipkart and Amazon seller dedicated to providing
+      reliable business solutions, from logistics to account management — helping brands thrive across India.
+    </p> 
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="underline"></div>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+    <div class="message-status" id="form-status"></div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> KR Enterprise. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Header shrink on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // Background color changer every 5 seconds
+    const colors = ['#fff5f9', '#fef6e4', '#e8f9fd', '#f9f1ff', '#fdf1f1'];
+    let i = 0;
+    setInterval(() => {
+      document.body.style.background = colors[i];
+      i = (i + 1) % colors.length;
+    }, 5000);
+
+    // Form submission via fetch to Google Apps Script
+    const form = document.getElementById('contact-form');
+    const statusDiv = document.getElementById('form-status');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const url = 'https://script.google.com/macros/s/AKfycbyZxpAWoggcELmm6fsHxkGw5a6sPLGWYfWxPzMrwFYPtjOAYmymIaRN-s_mrgUo0hXX/exec';
+
+      statusDiv.textContent = 'Sending…';
+
+      fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+      .then(response => response.json())
+      .then(res => {
+        if (res.success) {
+          statusDiv.textContent = 'Thank you! Your message has been sent.';
+          form.reset();
+        } else {
+          statusDiv.textContent = 'Oops! Something went wrong: ' + (res.message || 'Unknown error');
+        }
+      })
+      .catch(err => {
+        statusDiv.textContent = 'Error sending message: ' + err.toString();
+      });
+    });
+  </script>
+</body>
+</html>
